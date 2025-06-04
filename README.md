@@ -45,13 +45,15 @@ streamlit run streamlit_app.py
 
 ## Структура проєкту
 
-├── app.py                # Flask REST API + Swagger + ORM
-├── config.py             # Робота зі schema.json та auto-create БД
-├── schema.json           # Опис БД, таблиць, даних (автоматично/вручну)
-├── streamlit_app.py      # CRUD веб-інтерфейс (Streamlit)
-├── streamlit_schema_gen.py # Генератор schema.json (Streamlit)
-├── requirements.txt      # Залежності
-└── README.md             # Інструкція
+```
+├── app.py                   # Flask REST API, Swagger, ORM
+├── config.py                # Робота з schema.json, автоматичне створення БД
+├── schema.json              # Опис БД, таблиць, даних (автоматично/вручну)
+├── streamlit_app.py         # CRUD веб-інтерфейс (Streamlit)
+├── streamlit_schema_gen.py  # Генератор schema.json (Streamlit)
+├── requirements.txt         # Залежності
+└── README.md                # Інструкція
+```
 
 ---
 
