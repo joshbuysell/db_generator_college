@@ -136,10 +136,10 @@ streamlit run streamlit_app.py
 ![Alt text](examples/generator_schema.png?raw=true "Generator Schema")
 
 # CRUD Swagger
-![Alt text](examples/examples/swagger.png?raw=true "CRUD Swagger")
+![Alt text](examples/swagger.png?raw=true "CRUD Swagger")
 
 # View Table UI
-![Alt text](examples/examples/table_ui.png?raw=true "View Table UI")
+![Alt text](examples/table_ui.png?raw=true "View Table UI")
 
 # Example Diagram
-![Alt text](examples/examples/diagram.png?raw=true "Diagram")
+![Alt text](examples/diagram.png?raw=true "Diagram")
