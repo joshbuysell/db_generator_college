@@ -15,6 +15,7 @@
 ## Швидкий старт
 
 ### 1. Встановлення
+
 pip install -r requirements.txt
 
 ### 2. Генерація schema.json
@@ -27,9 +28,11 @@ streamlit run streamlit_schema_gen.py
 - Скачай schema.json і поклади у корінь проєкту
 
 ### 3. Генерація/оновлення БД та запуск API
+
 ```bash
 python app.py or flask run
 ```
+
 - Створиться база, таблиці, заповняться стартові дані, згенерується CRUD для всіх сутностей
 - Swagger UI: http://localhost:5000/apidocs
 
@@ -126,3 +129,20 @@ streamlit run streamlit_app.py
 ---
 
 
+
+## Examples
+
+
+
+```markdown
+![Generator Schema](examples/generator_schema.png)
+```
+
+
+```markdown
+![CRUD Swagger](examples/swagger.png)
+```
+
+```markdown
+![View Table UI](examples/table_ui.png)
+```
