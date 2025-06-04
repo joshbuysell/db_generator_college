@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 - Запусти генератор схеми:
 ```bash
-streamlit run streamlit_schema_gen.py
+streamlit run ui_generator_schema.py
 ```
 - Заповни форму: URI БД, таблиці, поля, стартові дані
 - Скачай schema.json і поклади у корінь проєкту
@@ -39,7 +39,7 @@ python app.py or flask run
 ### 4. Веб-інтерфейс для роботи з таблицями (CRUD GUI)
 
 ```bash
-streamlit run streamlit_app.py
+streamlit run ui_table.py
 ```
 
 - CRUD-доступ до всіх таблиць (візуальний інтерфейс): http://localhost:8501
@@ -52,8 +52,8 @@ streamlit run streamlit_app.py
 ├── app.py                   # Flask REST API, Swagger, ORM
 ├── config.py                # Робота з schema.json, автоматичне створення БД
 ├── schema.json              # Опис БД, таблиць, даних (автоматично/вручну)
-├── streamlit_app.py         # CRUD веб-інтерфейс (Streamlit)
-├── streamlit_schema_gen.py  # Генератор schema.json (Streamlit)
+├── ui_table.py         # CRUD веб-інтерфейс (Streamlit)
+├── ui_generator_schema.py  # Генератор schema.json (Streamlit)
 ├── requirements.txt         # Залежності
 └── README.md                # Інструкція
 ```
