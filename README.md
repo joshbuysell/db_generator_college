@@ -133,6 +133,9 @@ streamlit run streamlit_app.py
 ## Examples
 
 
+![Alt text](examples/generator_schema.png?raw=true "Optional Title")
+![Alt text](examples/generator_schema.png?raw=true "Optional Title")
+![Alt text](examples/generator_schema.png?raw=true "Optional Title")
 
 ```markdown
 ![Generator Schema](examples/generator_schema.png)
