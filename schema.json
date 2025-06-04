@@ -1,0 +1,97 @@
+{
+  "database": {
+    "uri": "mysql+pymysql://admin:@localhost:3306/demo_db"
+  },
+  "tables": [
+    {
+      "name": "users",
+      "columns": [
+        {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
+        {"name": "name", "type": "String", "length": 50},
+        {"name": "email", "type": "String", "length": 100}
+      ],
+      "data": [
+        {"name": "Alice", "email": "alice@example.com"},
+        {"name": "Bob", "email": "bob@example.com"},
+        {"name": "Carol", "email": "carol@example.com"},
+        {"name": "David", "email": "david@example.com"},
+        {"name": "Eve", "email": "eve@example.com"},
+        {"name": "Frank", "email": "frank@example.com"},
+        {"name": "Grace", "email": "grace@example.com"},
+        {"name": "Henry", "email": "henry@example.com"}
+      ]
+    },
+    {
+      "name": "posts",
+      "columns": [
+        {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
+        {"name": "user_id", "type": "Integer"},
+        {"name": "title", "type": "String", "length": 100},
+        {"name": "body", "type": "Text"}
+      ],
+      "data": [
+        {"user_id": 1, "title": "First post", "body": "Hello world!"},
+        {"user_id": 2, "title": "Second post", "body": "Test post content"},
+        {"user_id": 3, "title": "Vacation", "body": "Just came back from vacation!"},
+        {"user_id": 4, "title": "Daily thoughts", "body": "Today was a productive day."},
+        {"user_id": 5, "title": "Question", "body": "How to use this app?"},
+        {"user_id": 2, "title": "Announcement", "body": "New feature released!"},
+        {"user_id": 6, "title": "Food", "body": "Tried a new restaurant."},
+        {"user_id": 7, "title": "Book review", "body": "Finished reading a great book."}
+      ]
+    },
+    {
+      "name": "comments",
+      "columns": [
+        {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
+        {"name": "post_id", "type": "Integer"},
+        {"name": "user_id", "type": "Integer"},
+        {"name": "content", "type": "String", "length": 200}
+      ],
+      "data": [
+        {"post_id": 1, "user_id": 2, "content": "Congrats!"},
+        {"post_id": 1, "user_id": 3, "content": "Nice post."},
+        {"post_id": 2, "user_id": 1, "content": "Thank you!"},
+        {"post_id": 3, "user_id": 4, "content": "How was it?"},
+        {"post_id": 4, "user_id": 5, "content": "Agree with you."},
+        {"post_id": 5, "user_id": 6, "content": "I can help!"},
+        {"post_id": 6, "user_id": 7, "content": "What did you eat?"},
+        {"post_id": 7, "user_id": 8, "content": "Sounds interesting!"}
+      ]
+    },
+    {
+      "name": "categories",
+      "columns": [
+        {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
+        {"name": "name", "type": "String", "length": 50}
+      ],
+      "data": [
+        {"name": "News"},
+        {"name": "Personal"},
+        {"name": "Technology"},
+        {"name": "Food"},
+        {"name": "Books"},
+        {"name": "Travel"},
+        {"name": "General"}
+      ]
+    },
+    {
+      "name": "post_categories",
+      "columns": [
+        {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
+        {"name": "post_id", "type": "Integer"},
+        {"name": "category_id", "type": "Integer"}
+      ],
+      "data": [
+        {"post_id": 1, "category_id": 1},
+        {"post_id": 2, "category_id": 1},
+        {"post_id": 3, "category_id": 6},
+        {"post_id": 4, "category_id": 2},
+        {"post_id": 5, "category_id": 2},
+        {"post_id": 6, "category_id": 4},
+        {"post_id": 7, "category_id": 5},
+        {"post_id": 8, "category_id": 3}
+      ]
+    }
+  ]
+}

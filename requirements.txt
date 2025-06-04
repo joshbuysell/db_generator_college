@@ -1,0 +1,7 @@
+Flask
+SQLAlchemy
+PyMySQL
+Flasgger
+flask_sqlalchemy
+streamlit
+pandas
