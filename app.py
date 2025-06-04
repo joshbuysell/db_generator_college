@@ -33,7 +33,14 @@ for table in schema["tables"]:
             params["primary_key"] = True
         if col.get("autoincrement"):
             params["autoincrement"] = True
-        columns[col["name"]] = db.Column(col_type(*args), **params)
+        if col.get("foreign_key"):
+            columns[col["name"]] = db.Column(
+                col_type(*args),
+                sqlalchemy.ForeignKey(col["foreign_key"]),
+                **params
+            )
+        else:
+            columns[col["name"]] = db.Column(col_type(*args), **params)
     model = type(table["name"].capitalize(), (db.Model,), columns)
     models[table["name"]] = model
 

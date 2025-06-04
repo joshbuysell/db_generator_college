@@ -25,7 +25,7 @@
       "name": "posts",
       "columns": [
         {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
-        {"name": "user_id", "type": "Integer"},
+        {"name": "user_id", "type": "Integer", "foreign_key": "users.id"},
         {"name": "title", "type": "String", "length": 100},
         {"name": "body", "type": "Text"}
       ],
@@ -44,8 +44,8 @@
       "name": "comments",
       "columns": [
         {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
-        {"name": "post_id", "type": "Integer"},
-        {"name": "user_id", "type": "Integer"},
+        {"name": "post_id", "type": "Integer", "foreign_key": "posts.id"},
+        {"name": "user_id", "type": "Integer", "foreign_key": "users.id"},
         {"name": "content", "type": "String", "length": 200}
       ],
       "data": [
@@ -79,8 +79,8 @@
       "name": "post_categories",
       "columns": [
         {"name": "id", "type": "Integer", "primary_key": true, "autoincrement": true},
-        {"name": "post_id", "type": "Integer"},
-        {"name": "category_id", "type": "Integer"}
+        {"name": "post_id", "type": "Integer", "foreign_key": "posts.id"},
+        {"name": "category_id", "type": "Integer", "foreign_key": "categories.id"}
       ],
       "data": [
         {"post_id": 1, "category_id": 1},

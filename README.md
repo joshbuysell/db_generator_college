@@ -132,20 +132,14 @@ streamlit run streamlit_app.py
 
 ## Examples
 
+# Generator Schema
+![Alt text](examples/generator_schema.png?raw=true "Generator Schema")
 
-![Alt text](examples/generator_schema.png?raw=true "Optional Title")
-![Alt text](examples/generator_schema.png?raw=true "Optional Title")
-![Alt text](examples/generator_schema.png?raw=true "Optional Title")
+# CRUD Swagger
+![Alt text](examples/examples/swagger.png?raw=true "CRUD Swagger")
 
-```markdown
-![Generator Schema](examples/generator_schema.png)
-```
+# View Table UI
+![Alt text](examples/examples/table_ui.png?raw=true "View Table UI")
 
-
-```markdown
-![CRUD Swagger](examples/swagger.png)
-```
-
-```markdown
-![View Table UI](examples/table_ui.png)
-```
+# Example Diagram
+![Alt text](examples/examples/diagram.png?raw=true "Diagram")
