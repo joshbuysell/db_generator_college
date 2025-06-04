@@ -72,43 +72,43 @@ streamlit run streamlit_app.py
 
 Ця схема описує базу даних із п’ятьма таблицями:
 
-- **users**  
-  Зберігає користувачів.  
-  - `id`: Integer, PK, autoincrement  
-  - `name`: String(50)  
-  - `email`: String(100)  
+- **users**
+  Зберігає користувачів.
+  - `id`: Integer, PK, autoincrement
+  - `name`: String(50)
+  - `email`: String(100)
   Містить 8 користувачів (Alice, Bob, Carol, ...).
 
-- **posts**  
-  Пости користувачів.  
-  - `id`: Integer, PK, autoincrement  
-  - `user_id`: Integer (автор)  
-  - `title`: String(100)  
-  - `body`: Text  
+- **posts**
+  Пости користувачів.
+  - `id`: Integer, PK, autoincrement
+  - `user_id`: Integer (автор)
+  - `title`: String(100)
+  - `body`: Text
   Містить 8 постів, кожен прив’язаний до користувача.
 
-- **comments**  
-  Коментарі до постів.  
-  - `id`: Integer, PK, autoincrement  
-  - `post_id`: Integer  
-  - `user_id`: Integer (автор коментаря)  
-  - `content`: String(200)  
+- **comments**
+  Коментарі до постів.
+  - `id`: Integer, PK, autoincrement
+  - `post_id`: Integer
+  - `user_id`: Integer (автор коментаря)
+  - `content`: String(200)
   8 коментарів до різних постів.
 
-- **categories**  
-  Категорії для постів.  
-  - `id`: Integer, PK, autoincrement  
-  - `name`: String(50)  
+- **categories**
+  Категорії для постів.
+  - `id`: Integer, PK, autoincrement
+  - `name`: String(50)
   7 категорій (News, Personal, Technology, ...).
 
-- **post_categories**  
-  Зв’язок багато-до-багатьох між постами та категоріями.  
-  - `id`: Integer, PK, autoincrement  
-  - `post_id`: Integer  
-  - `category_id`: Integer  
+- **post_categories**
+  Зв’язок багато-до-багатьох між постами та категоріями.
+  - `id`: Integer, PK, autoincrement
+  - `post_id`: Integer
+  - `category_id`: Integer
   8 зв’язків між постами та категоріями.
 
-**URI БД:**  
+**URI БД:**
 `mysql+pymysql://login:password@localhost:3306/demo_db`
 
 Ця структура дозволяє зберігати користувачів, їхні пости, коментарі, категорії та зв’язки між постами й категоріями.
@@ -116,11 +116,11 @@ streamlit run streamlit_app.py
 
 ## FAQ
 
-- **Потрібно більше таблиць/записів?**  
+- **Потрібно більше таблиць/записів?**
   Просто опиши в schema.json.
-- **Не працює підключення до БД?**  
+- **Не працює підключення до БД?**
   Перевір URI і права користувача.
-- **Хочеш PostgreSQL чи SQLite?**  
+- **Хочеш PostgreSQL чи SQLite?**
   Зміни URI на потрібний формат.
 
 ---
